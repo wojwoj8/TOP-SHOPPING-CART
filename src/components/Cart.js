@@ -2,8 +2,9 @@ const Cart = () =>{
 
     return(
         
+        
         <div className="cart">
-            cart
+            
         </div>
     )
 }
