@@ -1,15 +1,29 @@
-const Card = ({image, name, price}) =>{
+import { Link } from "react-router-dom";
+const Card = ({image, name, price, id, quantity}) =>{
 
     return (
 
-        <div className="card-item" key={name}>
-            <img src={image} alt={name}>
-            </img>
-            <p>
-                {price}
-            </p>
+        <Link to={`/shop/${id}`}
+        
+        >
+        
+            <div className="card-item" key={id}>
+                <img src={image} alt={name}>
+                </img>
+                <div className="card-item-desc">
+                    <p className="card-name">
+                        {name}
+                    </p>
 
-        </div>
+                    <p className="card-price">
+                    Price: {price}$
+                    </p>
+                    
+                    
+                </div>
+
+            </div>
+        </Link>
     )
 }
 

@@ -3,7 +3,7 @@ import Icon from '@mdi/react';
 import { mdiCart } from '@mdi/js';
 
 
-const Navbar = () =>{
+const Navbar = ({counter}) =>{
 
 
     return(
@@ -27,7 +27,7 @@ const Navbar = () =>{
 
                     
                         <Link to="/cart">
-                            <li><Icon path={mdiCart} size={1} /></li>
+                            <li><Icon path={mdiCart} size={1} /> {counter}</li>
                         </Link>
                     </div>
                 </ul>
