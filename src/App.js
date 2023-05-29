@@ -46,17 +46,34 @@ const App = () => {
 
   const addToCart = (item) =>{
 
-    
     if (cart.includes(item)){
-      item.quantity += 1;
+
+      const arrItem  = cart.find((it) => it.id === item.id)
+
+      arrItem.quantity += 1;
+      setCart([...cart])
     }
     else{
       setCart([...cart, item]);
     }
+    setCounter(counter + 1)
     console.log(cart)
-    setCounter(cart.length + 1);
+
   }
-  
+  const increment = (item) =>{
+    item.quantity += 1;
+    setCounter(counter + 1)
+  }
+
+  const decrement = (item) =>{
+    // console.log(item)
+    if (item.quantity > 1){
+      console.log('test')
+      item.quantity -= 1;
+      setCounter(counter - 1)
+    }
+    
+  }
   return(
     <BrowserRouter>
     {/* this navbar will always display */}
@@ -72,6 +89,8 @@ const App = () => {
 
               <Route path="/cart" element={<Cart
               cart={cart}
+              increment={increment}
+              decrement={decrement}
 
               ></Cart>} />
 

@@ -1,4 +1,4 @@
-const Cart = ({cart}) =>{
+const Cart = ({cart, decrement, increment}) =>{
 
     return(
         
@@ -9,11 +9,18 @@ const Cart = ({cart}) =>{
             <div className="cart-item" key={item.id}>
                 <p>
                     {item.name}
-                    <br></br>
-                    {item.price}
-                    <br></br>
-                    {item.quantity}
                 </p>
+                    <br></br>
+                    <p>{item.price}</p>
+                    
+                    <br></br>
+                    <div className="cart-quantity">
+                        <button onClick={(e) => decrement(item)}>-</button>
+                        {item.quantity}
+                        <button onClick={(e) => increment(item)}>+</button>
+                    </div>
+                    
+               
                 <img src={item.image} alt={item.name}></img>
             </div>
         ))}
