@@ -1,5 +1,5 @@
 const Cart = ({cart, decrement, increment, totalPrice}) =>{
-
+    const fullPrice = totalPrice();
     return(
         
         
@@ -24,7 +24,9 @@ const Cart = ({cart, decrement, increment, totalPrice}) =>{
                 <img src={item.image} alt={item.name}></img>
             </div>
         ))}
-        <p>Total price: {totalPrice()}</p>
+        {fullPrice !==0 ? <p>Total price: {totalPrice()}</p> :
+        <h2>Your cart is empty, add something!!</h2>}
+        
         </div>
     )
 }
