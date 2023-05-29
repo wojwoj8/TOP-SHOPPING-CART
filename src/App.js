@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
@@ -45,10 +45,15 @@ const App = () => {
   const [counter, setCounter] = useState(0);
 
   const addToCart = (item) =>{
+
+    
     if (cart.includes(item)){
       item.quantity += 1;
     }
-    setCart([...cart, item]);
+    else{
+      setCart([...cart, item]);
+    }
+    console.log(cart)
     setCounter(cart.length + 1);
   }
   
@@ -65,7 +70,10 @@ const App = () => {
 
               <Route path="/about" element={<About></About>} />
 
-              <Route path="/cart" element={<Cart></Cart>} />
+              <Route path="/cart" element={<Cart
+              cart={cart}
+
+              ></Cart>} />
 
               <Route path="/shop" element={<Shop
 

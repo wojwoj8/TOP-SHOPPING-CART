@@ -47,8 +47,8 @@ describe("Shop component", () =>{
             //access to item with name BCAA
             userEvent.click(shopItemLink)
         })  
-        const price = screen.getByText('Price: 50$');
+        const price = screen.getByText(/Price:/i);
         console.log(price)
-        expect(price).toContainElement("p");
+        expect(price).toBe("Price:50$");
     })
 })
