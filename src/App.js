@@ -74,6 +74,14 @@ const App = () => {
     }
     
   }
+
+  const totalPrice = () =>{
+    let price = 0;
+    for(let i = 0; i < cart.length; i++){
+      price += cart[i].quantity * cart[i].price;
+    }
+    return price;
+  }
   return(
     <BrowserRouter>
     {/* this navbar will always display */}
@@ -91,6 +99,7 @@ const App = () => {
               cart={cart}
               increment={increment}
               decrement={decrement}
+              totalPrice={totalPrice}
 
               ></Cart>} />
 

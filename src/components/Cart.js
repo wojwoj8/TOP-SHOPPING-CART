@@ -1,4 +1,4 @@
-const Cart = ({cart, decrement, increment}) =>{
+const Cart = ({cart, decrement, increment, totalPrice}) =>{
 
     return(
         
@@ -24,7 +24,7 @@ const Cart = ({cart, decrement, increment}) =>{
                 <img src={item.image} alt={item.name}></img>
             </div>
         ))}
-
+        <p>Total price: {totalPrice()}</p>
         </div>
     )
 }
