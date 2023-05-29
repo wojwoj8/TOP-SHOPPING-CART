@@ -20,7 +20,7 @@ const Item = ({items, addToCart}) =>{
                 
                 <hr></hr>
 
-                <p>Price: {price}$</p>
+                <p className="price">Price: {price}$</p>
                 <p className="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus euismod ante, convallis sagittis justo scelerisque nec. Cras nec eros ullamcorper, tempor quam eu, venenatis erat. Vestibulum dignissim tortor nec risus ultricies, nec sodales metus consequat. Fusce sit amet convallis augue. Donec vehicula nisi a sem luctus, non euismod quam venenatis. Praesent id convallis elit. Sed faucibus mi ut vehicula pellentesque. Vestibulum quis ex lectus. In maximus, eros sagittis ultrices cursus, diam mauris euismod nibh, in mollis nulla dolor ullamcorper sapien.</p>
 
                 <div className="item-buttons">

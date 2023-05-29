@@ -45,6 +45,9 @@ const App = () => {
   const [counter, setCounter] = useState(0);
 
   const addToCart = (item) =>{
+    if (cart.includes(item)){
+      item.quantity += 1;
+    }
     setCart([...cart, item]);
     setCounter(cart.length + 1);
   }
