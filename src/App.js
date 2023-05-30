@@ -44,18 +44,31 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const [counter, setCounter] = useState(0);
 
+  // for checking if item in cart array, includes works on reference 
+  // and since I changed item to new object have to check it this way
+  const findItem = (item) =>{
+    const arrItem = cart.find((id) => item.id === id.id);
+
+    if (arrItem !== undefined){
+      console.log(`item is in cart:`)
+      return arrItem;
+    }
+    
+  }
   const addToCart = (item) =>{
 
-    // const newItem = {item};
-    if (cart.includes(item)){
+    const newItem = {...item};
+    const found = findItem(newItem);
+    if (found){
 
-      const arrItem  = cart.find((it) => it.id === item.id)
-
+      const arrItem  = found;
+      
+      console.log('is in array')
       arrItem.quantity += 1;
       setCart([...cart])
     }
     else{
-      setCart([...cart, item]);
+      setCart([...cart, newItem]);
     }
     setCounter(counter + 1)
     console.log(cart)
@@ -96,6 +109,7 @@ const App = () => {
     alert('Thanks for purchase!!!')
     // for (let)
     setCart([]);
+    setCounter(0);
   }
 
   return(
@@ -116,6 +130,7 @@ const App = () => {
               increment={increment}
               decrement={decrement}
               totalPrice={totalPrice}
+              checkout={checkout}
 
               ></Cart>} />
 

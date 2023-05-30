@@ -1,4 +1,4 @@
-const Cart = ({cart, decrement, increment, totalPrice}) =>{
+const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
     const fullPrice = totalPrice();
     return(
         
@@ -38,7 +38,7 @@ const Cart = ({cart, decrement, increment, totalPrice}) =>{
                     <p>
                         Total price: {fullPrice}$
                     </p>
-                    <button>
+                    <button onClick={e => checkout()}>
                         Checkout
                     </button> 
                 </div>
