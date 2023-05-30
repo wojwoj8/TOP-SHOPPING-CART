@@ -32,7 +32,17 @@ const Cart = ({cart, decrement, increment, totalPrice}) =>{
             ))}
         </div>
             <div className="cart-total">
-                {fullPrice !==0 ? <p>Total price: {fullPrice}$</p> :
+                {fullPrice !==0 ? 
+                    <div className="cart-total-cont">
+                
+                    <p>
+                        Total price: {fullPrice}$
+                    </p>
+                    <button>
+                        Checkout
+                    </button> 
+                </div>
+                :
                 <h2>Your cart is empty, add something!!</h2>}
             </div>    
         </div>

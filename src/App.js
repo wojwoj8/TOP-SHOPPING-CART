@@ -46,6 +46,7 @@ const App = () => {
 
   const addToCart = (item) =>{
 
+    // const newItem = {item};
     if (cart.includes(item)){
 
       const arrItem  = cart.find((it) => it.id === item.id)
@@ -89,6 +90,14 @@ const App = () => {
     }
     return price;
   }
+
+
+  const checkout = () =>{
+    alert('Thanks for purchase!!!')
+    // for (let)
+    setCart([]);
+  }
+
   return(
     <BrowserRouter>
     {/* this navbar will always display */}
