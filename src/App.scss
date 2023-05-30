@@ -89,47 +89,97 @@ html, body{
     display: flex;
     max-width: 100%;
     height: auto;
-  
-    .item-img {
-      flex: 0 1 auto;
-      display: flex;
-      max-height:30%;
-      max-width: 30%;
-      align-items: flex-start;
-    }
-  
+  }
+  .item-img {
+    flex: 0 1 auto;
+    display: flex;
+    max-height:30%;
+    max-width: 30%;
+    align-items: flex-start;
+
     img {
       max-width: 100% ;
       max-height: 100%;
       box-sizing:inherit;
     }
-  
-    .item-desc {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    //   justify-content: center;
-      margin-left: 5vw;
-
-      hr{
-        width: 90%;
-        margin: 0;
-      }
-  
-      .item-name {
-        font-size: 4rem;
-        // text-align: center;
-        margin: 0;
-      }
-  
-      p {
-        font-size: 1.5rem;
-        line-height: 1.5;
-        margin-bottom: 0px;
-      }
-      
-    }
-    .lorem{
-        font-size: 1.2rem !important;
-    }
   }
+
+  
+
+  .item-desc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  //   justify-content: center;
+    margin-left: 5vw;
+
+    hr{
+      width: 90%;
+      margin: 0;
+    }
+
+    .item-name {
+      font-size: 4rem;
+      // text-align: center;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 0px;
+    }
+    
+  }
+  .lorem{
+      font-size: 1.2rem !important;
+  }
+  
+
+//CART
+
+.cart{
+  // display: flex;
+ 
+}
+.cart-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1rem;
+}
+.cart-item{
+  display: flex;
+  flex-direction: column;
+  width:30vw;
+  height: 60vh;
+  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+
+  h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+.cart-price{
+  p{
+    margin: 0;
+  }
+}
+.cart-img{
+  // @extend .item-img;
+  max-height: 70%;
+  max-width: 70%;
+  img {
+    max-width: 100% ;
+    max-height: 100%;
+    box-sizing:inherit;
+  }
+}
+
+.cart-total{
+  p{
+    
+  }
+}

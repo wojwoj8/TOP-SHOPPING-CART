@@ -68,9 +68,16 @@ const App = () => {
   const decrement = (item) =>{
     // console.log(item)
     if (item.quantity > 1){
-      console.log('test')
+      // console.log('test')
       item.quantity -= 1;
       setCounter(counter - 1)
+    }
+    else if (item.quantity === 1){
+      // assign to variable new cart without item, then set cart to new array
+      const updatedCart = cart.filter(it => it.id !== item.id);
+      setCounter(counter - 1);
+      setCart(updatedCart);
+      
     }
     
   }
