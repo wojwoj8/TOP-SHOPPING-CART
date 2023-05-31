@@ -4,6 +4,7 @@ $padding: 0 4vw;
 $margin-top: 1rem;
 $padding-main: 0 20px;
 $textShadow: 4px 3px 19px rgba(239, 239, 239, 1);
+$buttShadow: 2px 2px 14px 0px rgb(26, 24, 26);
 
 
 html, body{
@@ -49,7 +50,19 @@ html, body{
           margin-right: 10px;
           color: aliceblue;
           font-size: 1.25rem;
+
+          &:hover{
+            font-size: 1.3rem;
+
+            
+          }
+          
+          
       }
+      .last-li{
+        font-size: 1.25rem !important;
+      }
+      
       
   }
 
@@ -185,8 +198,24 @@ html, body{
     font-size: 1.2rem !important;
 }
 
-.item-buttons{
-  
+.item-buttons, .cart-total-cont{
+  margin-top: 10px;
+  button{
+    font-size: 1.25rem;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px 10px;
+
+    &:hover{
+      box-shadow:$buttShadow;
+    }
+    &:active{
+      box-shadow: none;
+      color: grey;
+    }
+  }
 }
   
 

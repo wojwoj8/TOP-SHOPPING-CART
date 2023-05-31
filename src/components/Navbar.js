@@ -27,7 +27,7 @@ const Navbar = ({counter}) =>{
 
                     
                         <Link to="/cart">
-                            <li><Icon className="cart-icon" path={mdiCart} size={1} /> {counter}</li>
+                            <li className="last-li"><Icon className="cart-icon" path={mdiCart} size={1} /> {counter}</li>
                         </Link>
                     </div>
                 </ul>
