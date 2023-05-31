@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from './components/Home';
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
@@ -57,7 +57,9 @@ const App = () => {
   }
   const addToCart = (item) =>{
 
-    const newItem = {...item};
+    // method to get deep copy of object (deep copy can make copy of object with objects in it
+    // while shallow copy {...item} can copy only object without objects in it)
+    const newItem = structuredClone(item);
     const found = findItem(newItem);
     if (found){
 
@@ -107,7 +109,6 @@ const App = () => {
 
   const checkout = () =>{
     alert('Thanks for purchase!!!')
-    // for (let)
     setCart([]);
     setCounter(0);
   }
@@ -146,6 +147,9 @@ const App = () => {
               addToCart={addToCart}
               
               ></Item>} />
+
+              {/* if path doesn't exist route to '/' */}
+              <Route path='*' element={<Navigate to ='/'/>} />
             
         </Routes>
         </div>

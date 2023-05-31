@@ -1,11 +1,17 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 const Item = ({items, addToCart}) =>{
 
     const {id} = useParams();
 
     const myItem = items.find((item) => item.id === Number(id))
-    
+    if (myItem === undefined){
+        // console.log('wrong id')
+        return(
+            <Navigate to = '/' />
+        )
+        
+    }
     const {name, image, price} = myItem
     // console.log(myItem)
     

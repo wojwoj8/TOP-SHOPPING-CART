@@ -3,6 +3,7 @@
 $padding: 0 4vw;
 $margin-top: 1rem;
 $padding-main: 0 20px;
+$textShadow: 4px 3px 19px rgba(239, 239, 239, 1);
 
 
 html, body{
@@ -11,6 +12,14 @@ html, body{
     min-width: 800px;
     background-image: url('./images/background.png');
     background-size: auto;
+    a{
+      text-decoration: none;
+      color: black;
+
+    }
+
+    
+    
 }
 :root{
     font-family: 'Roboto', sans-serif;
@@ -20,34 +29,54 @@ html, body{
     padding: $padding-main;
     
 }
+
+// NAVBAR
+
 .navbar{
-    display:flex;
-    // justify-content: space-between;
-    background-color: black;
+  display:flex;
+  // justify-content: space-between;
+  background-color: black;
+  a:hover, svg:hover{
+    text-shadow: $textShadow;
+  }
 
-    ul {
-        width: 100%;
-        display:flex;
-        justify-content: space-between;
-        padding-left: 20px !important;
-        li{
-            margin-right: 10px;
-            color: aliceblue;
-            font-size: 1.25rem;
-        }
-        
-    }
+  ul {
+      width: 100%;
+      display:flex;
+      justify-content: space-between;
+      padding-left: 20px !important;
+      li{
+          margin-right: 10px;
+          color: aliceblue;
+          font-size: 1.25rem;
+      }
+      
+  }
 
-    li{
-        list-style-type: none;
-    }
+  li{
+      list-style-type: none;
+  }
+}
+.nav-links{
+    display: flex; 
 }
 
-.nav-links{
-    
-    display: flex;
-    
-
+.nav-cart:hover{
+  .cart-icon{
+  
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+  }
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
 }
 
 // HOME
@@ -64,8 +93,13 @@ html, body{
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 20px;
-    column-gap: 20px;
+    column-gap: 40px;
     font-size: 1.5rem;
+    
+    p{
+      margin: 10px 0px;
+    }
+    
     
     img{
         width: 200px;
@@ -75,11 +109,25 @@ html, body{
 }
 
 .card-item{
-    border: 1px solid red;
+    border: 5px solid black;
+    
+}
+.card-item:hover{
+  img{
+    width: 225px;
+    height: 325px;
+  }
 }
 .card-name{
     // font-size: large;
     font-weight: bolder;
+}
+
+.card-item-desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid black;
 }
 
 .card-price{
@@ -108,34 +156,38 @@ html, body{
 
   
 
-  .item-desc {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  //   justify-content: center;
-    margin-left: 5vw;
+.item-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+//   justify-content: center;
+  margin-left: 5vw;
 
-    hr{
-      width: 90%;
-      margin: 0;
-    }
-
-    .item-name {
-      font-size: 4rem;
-      // text-align: center;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1.5rem;
-      line-height: 1.5;
-      margin-bottom: 0px;
-    }
-    
+  hr{
+    width: 90%;
+    margin: 0;
   }
-  .lorem{
-      font-size: 1.2rem !important;
+
+  .item-name {
+    font-size: 4rem;
+    // text-align: center;
+    margin: 0;
   }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 0px;
+  }
+  
+}
+.lorem{
+    font-size: 1.2rem !important;
+}
+
+.item-buttons{
+  
+}
   
 
 //CART
