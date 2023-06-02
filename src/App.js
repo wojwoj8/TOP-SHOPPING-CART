@@ -7,7 +7,6 @@ import Cart from "./components/Cart";
 import Shop from "./Shop";
 import Card from './components/Card';
 import "./App.scss";
-import About from './components/About';
 import Item from "./components/Item";
 
 import bcaa from "./images/bcaa.jpg";
@@ -123,8 +122,6 @@ const App = () => {
           
           
               <Route path="/" element={<Home></Home>} />
-
-              <Route path="/about" element={<About></About>} />
 
               <Route path="/cart" element={<Cart
               cart={cart}

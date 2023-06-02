@@ -15,10 +15,6 @@ const Navbar = ({counter}) =>{
                             <li>Home</li> 
                         </Link>
 
-                        <Link to="/about">
-                            <li>About</li>
-                        </Link>
-
                         <Link to="/shop">
                             <li>Shop</li>
                         </Link>

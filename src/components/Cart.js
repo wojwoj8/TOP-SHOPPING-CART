@@ -59,7 +59,11 @@ const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
                     </button> 
                 </div>
                 :
-                <h2>Your cart is empty, add something!!</h2>}
+                <div className="cart-empty">
+                    <h2>Your cart is empty, add something!!</h2>
+                </div>
+                    }
+                
             </div>    
         </div>
         

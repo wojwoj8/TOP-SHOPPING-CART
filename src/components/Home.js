@@ -1,11 +1,17 @@
+import { Link } from "react-router-dom";
 const Home = () =>{
 
     return (
 
         <div className="home">
             <h2>
-                home content
+                Welcome to my Supplements store!💪💪💪
             </h2>
+            <Link to='/shop'>
+                <button>
+                    Go Shopping
+               </button>    
+            </Link>
         </div>
     )
 }

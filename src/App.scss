@@ -34,6 +34,7 @@ html, body{
 }
 .App{
     // padding: $padding-main;
+    // padding-top: 15px;
     height: calc(100% - 60px);
  
 }
@@ -102,7 +103,38 @@ html, body{
 
 // HOME
 .home{
-    
+  padding: $padding-main;
+  height: 100%;
+  // margin-top: -15px;
+  background-image: url('./images/background.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  
+  button{
+    margin-top: 10rem;
+    font-size: 5rem;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px 10px;
+
+    &:hover{
+      box-shadow:$buttShadow;
+    }
+    &:active{
+      box-shadow: none;
+      color: grey;
+    }
+  }
+  h2{
+    font-size: 4rem;
+  }
     
 }
 // SHOP CARDS
@@ -164,6 +196,7 @@ html, body{
     display: flex;
     max-width: 100%;
     height: auto;
+    padding: $padding-main;
   }
   .item-img {
     flex: 0 1 auto;
@@ -370,4 +403,8 @@ html, body{
   }
 
 
+}
+.cart-empty{
+  position: absolute;
+  top:80px;
 }
