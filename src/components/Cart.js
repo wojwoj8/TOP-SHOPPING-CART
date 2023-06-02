@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import Icon from '@mdi/react';
+import { mdiMinusBox } from '@mdi/js';
+import { mdiPlusBox } from '@mdi/js';
 
 const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
     const fullPrice = totalPrice();
@@ -22,7 +25,7 @@ const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
                 </Link>
 
                 <div className="cart-bottom">
-                    
+
                     <h2>
                             {item.name}
                     </h2>
@@ -34,9 +37,9 @@ const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
                     </div>
                     
                     <div className="cart-quantity">
-                        <button onClick={(e) => decrement(item)}>-</button>
-                        {item.quantity}
-                        <button onClick={(e) => increment(item)}>+</button>
+                        <Icon path={mdiMinusBox} size={1} onClick={(e) => decrement(item)} />
+                            <span>{item.quantity}</span>
+                        <Icon path={mdiPlusBox} size={1}  onClick={(e) => increment(item)} />
                     </div>
                 </div>
                 </div>
