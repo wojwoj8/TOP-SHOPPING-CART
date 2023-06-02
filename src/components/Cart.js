@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
     const fullPrice = totalPrice();
     return(
@@ -9,24 +11,35 @@ const Cart = ({cart, decrement, increment, totalPrice, checkout}) =>{
             
             {cart.map((item) =>(
                 <div className="cart-item" key={item.id}>
+                    
+            
+                <Link to={`/shop/${item.id}`}>
+
+                    <div className="cart-img">
+                        <img src={item.image} alt={item.name}></img>
+                    </div>
+
+                </Link>
+
+                <div className="cart-bottom">
+                    
                     <h2>
-                        {item.name}
+                            {item.name}
                     </h2>
-            
-                <div className="cart-img">
-                    <img src={item.image} alt={item.name}></img>
+                <div className="cart-price-quan-cont">
+                    
+                    <div className="cart-price">
+                        
+                        <p>${item.price}.00</p>
+                    </div>
+                    
+                    <div className="cart-quantity">
+                        <button onClick={(e) => decrement(item)}>-</button>
+                        {item.quantity}
+                        <button onClick={(e) => increment(item)}>+</button>
+                    </div>
                 </div>
-            
-                <div className="cart-price">
-                    <p>Price: {item.price}$</p>
                 </div>
-                
-                <div className="cart-quantity">
-                    <button onClick={(e) => decrement(item)}>-</button>
-                    {item.quantity}
-                    <button onClick={(e) => increment(item)}>+</button>
-                </div>
-                
                 
                 </div>
             ))}
