@@ -17,13 +17,6 @@ exports[`App component display homepage 1`] = `
           </li>
         </a>
         <a
-          href="/about"
-        >
-          <li>
-            About
-          </li>
-        </a>
-        <a
           href="/shop"
         >
           <li>
@@ -37,7 +30,9 @@ exports[`App component display homepage 1`] = `
         <a
           href="/cart"
         >
-          <li>
+          <li
+            class="last-li"
+          >
             <svg
               class="cart-icon"
               role="presentation"
@@ -63,8 +58,15 @@ exports[`App component display homepage 1`] = `
       class="home"
     >
       <h2>
-        home content
+        Welcome to my Supplements store!💪💪💪
       </h2>
+      <a
+        href="/shop"
+      >
+        <button>
+          Go Shopping
+        </button>
+      </a>
     </div>
   </div>
 </div>

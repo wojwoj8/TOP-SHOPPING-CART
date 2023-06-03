@@ -2,6 +2,7 @@
   "name": "top-shopping-cart",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://wojwoj8.github.io/TOP-SHOPPING-CART",
   "dependencies": {
     "@mdi/js": "^7.2.96",
     "@mdi/react": "^1.6.1",
@@ -20,6 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

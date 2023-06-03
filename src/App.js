@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import Home from './components/Home';
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
@@ -49,7 +49,7 @@ const App = () => {
     const arrItem = cart.find((id) => item.id === id.id);
 
     if (arrItem !== undefined){
-      console.log(`item is in cart:`)
+      // console.log(`item is in cart:`)
       return arrItem;
     }
     
@@ -64,7 +64,7 @@ const App = () => {
 
       const arrItem  = found;
       
-      console.log('is in array')
+      // console.log('is in array')
       arrItem.quantity += 1;
       setCart([...cart])
     }
@@ -72,7 +72,7 @@ const App = () => {
       setCart([...cart, newItem]);
     }
     setCounter(counter + 1)
-    console.log(cart)
+    // console.log(cart)
 
   }
   const increment = (item) =>{
@@ -113,7 +113,7 @@ const App = () => {
   }
 
   return(
-    <BrowserRouter>
+    <HashRouter>
     {/* this navbar will always display */}
         <Navbar
         counter={counter} />
@@ -150,7 +150,7 @@ const App = () => {
             
         </Routes>
         </div>
-    </BrowserRouter>
+    </HashRouter>
 )
     
 }

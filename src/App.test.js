@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
-import About from "./components/About";
 import Shop from "./Shop";
 import { act } from "react-dom/test-utils";
 
@@ -13,16 +12,6 @@ describe("App component", () =>{
         expect(container).toMatchSnapshot();
 })
 
-    it("renders about after click about on navbar", async () =>{
-        render(<App />);
-        await act(async () =>{
-            const about = screen.getByRole("link", {name:"About"});
-            await userEvent.click(about);
-        })
-        const h2 = screen.getByText(/About page/i);
-        expect(h2).toBeInTheDocument();
-        
-    })
 })
 
 describe("Shop component", () =>{

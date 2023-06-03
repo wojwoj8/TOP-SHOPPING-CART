@@ -5,6 +5,7 @@ $margin-top: 1rem;
 $padding-main: 0 20px;
 $textShadow: 4px 3px 19px rgba(239, 239, 239, 1);
 $buttShadow: 2px 2px 14px 0px rgb(26, 24, 26);
+$itemShadow: 1px 36px 46px -22px rgba(66, 68, 90, 1);
 $imgBottomLine: 5px solid rgb(15, 232, 69);
 
 * {
@@ -163,7 +164,7 @@ html, body{
 }
 
 .card-item{
-    
+  box-shadow:$itemShadow;
     
 }
 .card-item:hover{
