@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TOP-SHOPPING-CART/static/css/main.98ab4481.css",
-    "main.js": "/TOP-SHOPPING-CART/static/js/main.b23afdf2.js",
+    "main.js": "/TOP-SHOPPING-CART/static/js/main.0d4b6ceb.js",
     "static/media/background.jpg": "/TOP-SHOPPING-CART/static/media/background.1f4d277e4f0e08645de6.jpg",
     "static/media/magnesium.jpg": "/TOP-SHOPPING-CART/static/media/magnesium.aedcfbe7f8b4cddfbe13.jpg",
     "static/media/omega3.jpg": "/TOP-SHOPPING-CART/static/media/omega3.27f1dc59c93e9f045bb5.jpg",
@@ -17,10 +17,10 @@
     "static/media/background.png": "/TOP-SHOPPING-CART/static/media/background.e7856153646e7de534f4.png",
     "index.html": "/TOP-SHOPPING-CART/index.html",
     "main.98ab4481.css.map": "/TOP-SHOPPING-CART/static/css/main.98ab4481.css.map",
-    "main.b23afdf2.js.map": "/TOP-SHOPPING-CART/static/js/main.b23afdf2.js.map"
+    "main.0d4b6ceb.js.map": "/TOP-SHOPPING-CART/static/js/main.0d4b6ceb.js.map"
   },
   "entrypoints": [
     "static/css/main.98ab4481.css",
-    "static/js/main.b23afdf2.js"
+    "static/js/main.0d4b6ceb.js"
   ]
 }
