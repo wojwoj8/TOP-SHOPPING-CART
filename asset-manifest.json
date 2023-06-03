@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/TOP-SHOPPING-CART/static/css/main.98ab4481.css",
+    "main.js": "/TOP-SHOPPING-CART/static/js/main.b23afdf2.js",
+    "static/media/background.jpg": "/TOP-SHOPPING-CART/static/media/background.1f4d277e4f0e08645de6.jpg",
+    "static/media/magnesium.jpg": "/TOP-SHOPPING-CART/static/media/magnesium.aedcfbe7f8b4cddfbe13.jpg",
+    "static/media/omega3.jpg": "/TOP-SHOPPING-CART/static/media/omega3.27f1dc59c93e9f045bb5.jpg",
+    "static/media/preworkout.jpg": "/TOP-SHOPPING-CART/static/media/preworkout.5c4bf12051e35a258562.jpg",
+    "static/media/bcaa.jpg": "/TOP-SHOPPING-CART/static/media/bcaa.0ba572b91e339df4127e.jpg",
+    "static/media/creatine.jpg": "/TOP-SHOPPING-CART/static/media/creatine.0ab6cb0f6c67a67a74ef.jpg",
+    "static/media/wheyProtein.jpg": "/TOP-SHOPPING-CART/static/media/wheyProtein.0ad617195a2941c22ce3.jpg",
+    "static/media/vitamineB12.jpg": "/TOP-SHOPPING-CART/static/media/vitamineB12.6b795b20efe4d52c8056.jpg",
+    "static/media/beta-alanine.jpg": "/TOP-SHOPPING-CART/static/media/beta-alanine.ae408c8fa325bd585023.jpg",
+    "static/media/citrulline.jpg": "/TOP-SHOPPING-CART/static/media/citrulline.fdfd8b557f930bff228a.jpg",
+    "static/media/vitamineD3.jpg": "/TOP-SHOPPING-CART/static/media/vitamineD3.9d15ee035cda298291dd.jpg",
+    "static/media/vitamineB6.jpg": "/TOP-SHOPPING-CART/static/media/vitamineB6.29fc1451f6f4d5f3a191.jpg",
+    "static/media/background.png": "/TOP-SHOPPING-CART/static/media/background.e7856153646e7de534f4.png",
+    "index.html": "/TOP-SHOPPING-CART/index.html",
+    "main.98ab4481.css.map": "/TOP-SHOPPING-CART/static/css/main.98ab4481.css.map",
+    "main.b23afdf2.js.map": "/TOP-SHOPPING-CART/static/js/main.b23afdf2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98ab4481.css",
+    "static/js/main.b23afdf2.js"
+  ]
+}
